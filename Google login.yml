@@ -1,0 +1,15 @@
+info:
+  name: Google login
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/api/customer/auth/google-login"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
