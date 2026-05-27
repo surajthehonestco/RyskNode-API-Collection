@@ -1,0 +1,35 @@
+info:
+  name: Login - Verify OTP
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/auth/verify-otp"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "email": "customer@example.com",
+        "purpose": "login",
+        "otp": "{{otp}}"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "const json = res.getBody();\r
+
+        if (json.verification_token) pm.collectionVariables.set('verification_token', json.verification_token);"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

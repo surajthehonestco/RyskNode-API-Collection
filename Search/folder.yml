@@ -1,0 +1,11 @@
+info:
+  name: Search
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit
+
+docs:
+  content: This folder includes the same search API for database and Elasticsearch modes. Elasticsearch is enabled on the server with `COMPANY_SEARCH_DRIVER=elasticsearch` and `php artisan search:sync-companies --fresh`.
+  type: text/markdown

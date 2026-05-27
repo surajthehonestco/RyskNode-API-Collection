@@ -1,0 +1,44 @@
+info:
+  name: Create Employee
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/admin/employees"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Admin Employee",
+        "email": "employee1@example.com",
+        "number": "+91 98765 43210",
+        "designation": "Product Manager",
+        "password": "123456",
+        "permissions": [
+          "companies.view",
+          "demo_requests.view",
+          "employees.manage"
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{admin_token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "const json = res.getBody();\r
+
+        if (json.employee && json.employee.id) pm.collectionVariables.set('employee_id', json.employee.id);"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

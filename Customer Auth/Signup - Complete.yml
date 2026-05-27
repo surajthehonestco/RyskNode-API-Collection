@@ -1,0 +1,39 @@
+info:
+  name: Signup - Complete
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/auth/signup"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "purpose": "signup",
+        "email": "customer@example.com",
+        "verification_token": "{{verification_token}}",
+        "name": "Customer Name",
+        "organization": "Example Pvt Ltd",
+        "number": "8905436786",
+        "industry": "Technology"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "const json = res.getBody();\r
+
+        if (json.token) pm.collectionVariables.set('customer_token', json.token);"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

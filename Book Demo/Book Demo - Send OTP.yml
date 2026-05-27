@@ -1,0 +1,27 @@
+info:
+  name: Book Demo - Send OTP
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/auth/send-otp"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "email": "suraj.paul.69@gmail.com",
+        "purpose": "book-demo"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

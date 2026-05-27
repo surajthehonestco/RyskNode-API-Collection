@@ -1,0 +1,29 @@
+opencollection: 1.0.0
+
+info:
+  name: RyskNode API
+
+request:
+  variables:
+    - name: base_url
+      value: http://127.0.0.1:8000
+    - name: admin_token
+      value: ""
+    - name: customer_token
+      value: ""
+    - name: verification_token
+      value: ""
+    - name: employee_id
+      value: "3"
+    - name: otp
+      value: "1234"
+
+docs:
+  content: Import this collection into Postman or Bruno. Set `base_url` first. For admin protected APIs, run Admin Login and set `admin_token` from the response token. Search uses database by default; to use Elasticsearch set `COMPANY_SEARCH_DRIVER=elasticsearch`, configure Elasticsearch env values, then run `php artisan search:sync-companies --fresh` on the server.
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

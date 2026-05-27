@@ -1,0 +1,36 @@
+info:
+  name: Update Employee
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/admin/employees/{{employee_id}}"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Updated Employee",
+        "email": "employee1@example.com",
+        "number": "+91 90011 22334",
+        "designation": "Sales Lead",
+        "is_active": true,
+        "permissions": [
+          "companies.view",
+          "demo_requests.view"
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{admin_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

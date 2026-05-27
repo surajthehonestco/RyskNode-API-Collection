@@ -1,0 +1,27 @@
+info:
+  name: Login - Send OTP
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/auth/send-otp"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "email": "customer@example.com",
+        "purpose": "login"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
