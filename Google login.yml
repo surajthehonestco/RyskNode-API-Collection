@@ -4,8 +4,16 @@ info:
   seq: 8
 
 http:
-  method: GET
+  method: POST
   url: "{{base_url}}/api/customer/auth/google-login"
+  body:
+    type: json
+    data: |-
+      {
+        "provider": "google",
+        "provider_account_id": "115358624739945643160",
+        "access_token": "GOOGLE_ACCESS_TOKEN"
+      }
   auth: inherit
 
 settings:
