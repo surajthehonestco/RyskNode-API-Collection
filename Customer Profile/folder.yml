@@ -1,0 +1,7 @@
+info:
+  name: Customer Profile
+  type: folder
+  seq: 8
+
+request:
+  auth: inherit
