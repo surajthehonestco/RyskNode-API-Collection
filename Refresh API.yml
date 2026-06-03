@@ -1,0 +1,45 @@
+info:
+  name: Refresh API
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://detail.finanvo.in/api/process-financials
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: X-API-KEY
+      value: "{{API_KEY}}"
+    - name: X-API-SECRET-KEY
+      value: "{{API_SECRET}}"
+  body:
+    type: json
+    data: |-
+      {
+        "cin": "U62010UP2023PTC191535",
+        "category": [
+          "Certificates",
+          "Change in Directors",
+          "Incorporation Documents",
+          "Charge Documents",
+          "Annual Returns and Balance Sheet eForms",
+          "LLP Forms(Conversion of company to LLP)",
+          "Other eForm Documents",
+          "Other Attachments"
+        ],
+        "file_name": []
+      }
+
+runtime:
+  variables:
+    - name: API_KEY
+      value: B4JqimOE0d
+    - name: API_SECRET
+      value: XB9PcaxZEdMHvySLJuZMLds9rK0C6M9nyYUqYdOK
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

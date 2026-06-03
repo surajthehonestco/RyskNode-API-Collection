@@ -1,0 +1,30 @@
+info:
+  name: director api
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: https://detail.finanvo.in/api/detailed-report/company/json/U35204KA1996PTC020766?key=all
+  headers:
+    - name: X-API-KEY
+      value: "{{API_KEY}}"
+    - name: X-API-SECRET-KEY
+      value: "{{API_SECRET}}"
+  params:
+    - name: key
+      value: all
+      type: query
+
+runtime:
+  variables:
+    - name: API_KEY
+      value: B4JqimOE0d
+    - name: API_SECRET
+      value: XB9PcaxZEdMHvySLJuZMLds9rK0C6M9nyYUqYdOK
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
