@@ -1,0 +1,24 @@
+info:
+  name: Test
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/temp/finanvo/company/L17110MH1973PLC019786/import"
+  headers:
+    - name: Content-Type
+      value: application/json
+
+runtime:
+  variables:
+    - name: API_KEY
+      value: B4JqimOE0d
+    - name: API_SECRET
+      value: XB9PcaxZEdMHvySLJuZMLds9rK0C6M9nyYUqYdOK
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

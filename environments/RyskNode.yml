@@ -1,0 +1,4 @@
+name: RyskNode
+variables:
+  - name: base_url
+    value: https://apis.rysknode.ai
