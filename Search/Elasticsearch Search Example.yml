@@ -19,7 +19,14 @@ http:
     - name: limit
       value: "10"
       type: query
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+runtime:
+  variables:
+    - name: token
+      value: 98|bHAncTyU6XFOOFVvKZYPD1zTWvtpdCCbNlSTSiru3d4e12a1
 
 settings:
   encodeUrl: true

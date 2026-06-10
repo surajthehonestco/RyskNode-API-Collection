@@ -16,9 +16,9 @@ http:
     data: |-
       {
         "purpose": "signup",
-        "email": "customer@example.com",
+        "email": "suraj.paul.69@gmail.com",
         "verification_token": "{{verification_token}}",
-        "name": "Customer Name",
+        "name": "Suraj paul",
         "organization": "Example Pvt Ltd",
         "number": "8905436786",
         "industry": "Technology"
