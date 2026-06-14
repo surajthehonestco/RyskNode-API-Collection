@@ -17,7 +17,7 @@ http:
       }
   auth:
     type: bearer
-    token: xxx
+    token: "{{customer_token}}"
 
 settings:
   encodeUrl: true
