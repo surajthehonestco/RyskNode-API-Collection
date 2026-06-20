@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "name": "Alex Morgan",
-        "email": "alex@example.com",
+        "name": "suraj 2",
+        "email": "surajj.paull.64@gmail.com",
         "number": "9876543210",
         "designation": "Risk Analyst",
         "allocations": [

@@ -1,0 +1,33 @@
+info:
+  name: Address update
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/customer/billing-information"
+  body:
+    type: json
+    data: |-
+      {
+        "billing_name": "Honest Digital Services Pvt Limited Goods and Services",
+        "contact_number": "+91 9087785534",
+        "billing_email": "honest.digital@thc.com",
+        "business_gst": "21AAZWRPN7649P9",
+        "address_line_1": "The Ruby, 29 Senapati Bapat Marg, Dadar West, Mumbai, Maharashtra 400028, India",
+        "address_line_2": "",
+        "country": "India",
+        "state": "Maharashtra",
+        "city": "Mumbai",
+        "zip_code": "400028",
+        "website": "https://www.sumitbhat.com"
+      }
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

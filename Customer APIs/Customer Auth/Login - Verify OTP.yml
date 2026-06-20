@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "email": "customer@example.com",
+        "email": "surajj.paull.64@gmail.com",
         "purpose": "login",
         "otp": "{{otp}}"
       }

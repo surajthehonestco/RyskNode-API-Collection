@@ -1,0 +1,21 @@
+info:
+  name: Company flag
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/companies/923/data?flag=overview"
+  params:
+    - name: flag
+      value: overview
+      type: query
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

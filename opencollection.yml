@@ -21,13 +21,13 @@ request:
     - name: admin_token
       value: ""
     - name: customer_token
-      value: 6|vXq0RDxa6Gj0C9gV1xZL34HTqbqwvNvh8ChGnFF7fbd3696f
+      value: 5|Y1jlpI25lzUB8DAFhaC1dPoVkNfDrqKiPlPXHCHVa9ebb2c5
     - name: verification_token
-      value: dtqufWGOrhqJ8Vl8GQjVAV4jfNz7nrqMqRzTKuQK82p5kNpkuKd058KCOYfJKNmY
+      value: 7AkGBiWORec9DFbD4q30LieAarG1Tff2dJur9RoMLpD00OCEQtXDjkl8j3ad0tzh
     - name: employee_id
       value: "3"
     - name: otp
-      value: "1922"
+      value: "7340"
 
 docs:
   content: Import this collection into Postman or Bruno. Set `base_url` first. For admin protected APIs, run Admin Login and set `admin_token` from the response token. Search uses database by default; to use Elasticsearch set `COMPANY_SEARCH_DRIVER=elasticsearch`, configure Elasticsearch env values, then run `php artisan search:sync-companies --fresh` on the server.
