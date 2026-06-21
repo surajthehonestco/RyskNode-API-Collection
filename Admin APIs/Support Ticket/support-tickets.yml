@@ -1,0 +1,17 @@
+info:
+  name: support-tickets
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/admin/support-tickets"
+  auth:
+    type: bearer
+    token: "{{admin_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

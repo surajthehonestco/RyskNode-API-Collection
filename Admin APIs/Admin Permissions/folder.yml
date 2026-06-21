@@ -1,7 +1,7 @@
 info:
-  name: Customer APIs
+  name: Admin Permissions
   type: folder
-  seq: 2
+  seq: 4
 
 request:
   auth: inherit

@@ -1,0 +1,26 @@
+info:
+  name: close ticket
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/api/customer/support-tickets/5/close"
+  body:
+    type: json
+    data: |-
+      {
+        "status": "open", // open | closed
+        "priority": "high", // low | normal | high | urgent
+        "category": "API",
+        "assigned_to": 2 // null
+      }
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

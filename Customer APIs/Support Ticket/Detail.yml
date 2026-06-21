@@ -1,0 +1,20 @@
+info:
+  name: Detail
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/api/customer/support-tickets/5"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

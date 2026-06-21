@@ -1,0 +1,20 @@
+info:
+  name: open ticket
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{base_url}}/api/customer/support-tickets/5/reopen"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

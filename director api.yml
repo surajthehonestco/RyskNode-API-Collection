@@ -1,7 +1,7 @@
 info:
   name: director api
   type: http
-  seq: 5
+  seq: 7
 
 http:
   method: GET
