@@ -1,14 +1,11 @@
 info:
-  name: PLans
+  name: Invoice
   type: http
-  seq: 1
+  seq: 2
 
 http:
   method: GET
-  url: "{{base_url}}/api/customer/plans"
-  body:
-    type: json
-    data: ""
+  url: "{{base_url}}/api/customer/billing-payments/{invoice}"
   auth:
     type: bearer
     token: "{{customer_token}}"

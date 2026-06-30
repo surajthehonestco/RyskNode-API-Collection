@@ -1,0 +1,31 @@
+info:
+  name: Add-ons checkout
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/add-ons/checkout"
+  body:
+    type: json
+    data: |-
+      {
+        "product_slug": "company-detailed-report",
+        "quantity": 1,
+        "payment_gateway": "razorpay"
+      }
+      //example
+      // {
+      //   "product_slug": "buyer-risk-assessment",
+      //   "quantity": 1,
+      //   "payment_gateway": "razorpay"
+      // }
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: Billing List
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/customer/billing-payments?from=2026-01-01&to=2026-01-31&status=paid"
+  params:
+    - name: from
+      value: 2026-01-01
+      type: query
+    - name: to
+      value: 2026-01-31
+      type: query
+    - name: status
+      value: paid
+      type: query
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
