@@ -19,7 +19,7 @@ request:
     - name: base_url
       value: http://127.0.0.1:8000
     - name: admin_token
-      value: ""
+      value: 295|GusXqbDJ5avMdAvyEXL2ZYyeFK0xhavMIgjcTsjc4689da06
     - name: customer_token
       value: 1|QDOwNHrdc6hbUhLFGXMIeJoH9lOh3VtXRd0NtrlLa48778e3
     - name: verification_token

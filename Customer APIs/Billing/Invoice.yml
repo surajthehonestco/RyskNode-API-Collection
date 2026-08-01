@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/customer/billing-payments/{invoice}"
+  url: "{{base_url}}/api/customer/billing-payments/3"
   auth:
     type: bearer
     token: "{{customer_token}}"
