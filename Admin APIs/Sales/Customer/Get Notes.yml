@@ -1,0 +1,25 @@
+info:
+  name: Get Notes
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/admin/sales/leads/D215967/notes"
+  body:
+    type: json
+    data: |-
+      {
+        "opportunity": "Enterprise Renewal Q3",
+        "stage": "follow_up",
+        "comment": "Customer confirmed renewal for next quarter. Follow up required before month end."
+      }
+  auth:
+    type: bearer
+    token: "{{admin_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

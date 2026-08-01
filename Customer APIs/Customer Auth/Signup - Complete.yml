@@ -16,7 +16,7 @@ http:
     data: |-
       {
         "purpose": "signup",
-        "email": "suraj.paul.69@gmail.com",
+        "email": "surajtest@yopmail.com",
         "verification_token": "{{verification_token}}",
         "name": "Suraj paul",
         "organization": "Example Pvt Ltd",
