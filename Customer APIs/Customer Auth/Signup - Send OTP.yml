@@ -15,7 +15,7 @@ http:
     type: json
     data: |-
       {
-        "email": "suraj@thehonestco.in",
+        "email": "surajtest@yopmail.com",
         "purpose": "signup"
       }
   auth: inherit

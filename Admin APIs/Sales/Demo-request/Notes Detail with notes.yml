@@ -1,0 +1,25 @@
+info:
+  name: Notes Detail with notes
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/api/admin/sales/leads/D8908KE/notes"
+  body:
+    type: json
+    data: |-
+      {
+        "opportunity": "Client Follow Up - Jul 2026",
+        "stage": "follow_up",
+        "comment": "Client asked for another demo next week."
+      }
+  auth:
+    type: bearer
+    token: "{{admin_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
