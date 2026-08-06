@@ -1,0 +1,24 @@
+info:
+  name: Change Subscription
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{base_url}}/api/admin/sales/customers/P6750GG/subscription"
+  body:
+    type: json
+    data: |-
+      {
+        "plan_slug": "premium",
+        "reason": "Admin upgraded customer after approval."
+      }
+  auth:
+    type: bearer
+    token: "{{admin_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
