@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/admin/sales/customers/D215967"
+  url: "{{base_url}}/api/admin/sales/customers/11"
   auth:
     type: bearer
     token: "{{admin_token}}"
