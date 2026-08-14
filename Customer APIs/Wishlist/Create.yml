@@ -1,0 +1,25 @@
+info:
+  name: Create
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/watchlists"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Gujarat Vendors",
+        "description": "Vendor monitoring list",
+        "status": "active"
+      }
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

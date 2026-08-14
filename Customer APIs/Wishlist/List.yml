@@ -1,0 +1,30 @@
+info:
+  name: List
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/customer/watchlists?search=gujarat&status=active&per_page=10"
+  params:
+    - name: search
+      value: gujarat
+      type: query
+    - name: status
+      value: active
+      type: query
+    - name: per_page
+      value: "10"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

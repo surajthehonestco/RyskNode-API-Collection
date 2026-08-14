@@ -1,0 +1,24 @@
+info:
+  name: Add Company to Wishlist
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/customer/watchlists/1/companies"
+  body:
+    type: json
+    data: |-
+      {
+        "company_id": 923,
+        "notes": "Track this company"
+      }
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

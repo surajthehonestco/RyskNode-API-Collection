@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://detail.finanvo.in/api/detailed-report/company/json/U35204KA1996PTC020766?key=all
+  url: https://detail.finanvo.in/api/detailed-report/company/json/U28990DL2013PTC249521?key=all
   headers:
     - name: X-API-KEY
       value: "{{API_KEY}}"
