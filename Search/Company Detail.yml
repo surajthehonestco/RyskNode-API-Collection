@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/companies/1"
+  url: "{{base_url}}/api/companies/1243373"
   headers:
     - name: Accept
       value: application/json

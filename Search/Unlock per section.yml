@@ -1,0 +1,27 @@
+info:
+  name: Unlock per section
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/api/companies/1243373/data?flag=charges"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: flag
+      value: charges
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

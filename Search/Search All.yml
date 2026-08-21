@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/search?query=reliance&type=all&page=1&per_page=10"
+  url: "{{base_url}}/api/search?query=U29254GJ2013FTC073479&type=all&page=1&per_page=10"
   headers:
     - name: Accept
       value: application/json
   params:
     - name: query
-      value: reliance
+      value: U29254GJ2013FTC073479
       type: query
     - name: type
       value: all
