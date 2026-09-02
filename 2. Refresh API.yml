@@ -1,7 +1,7 @@
 info:
-  name: Refresh API
+  name: 2. Refresh API
   type: http
-  seq: 5
+  seq: 6
 
 http:
   method: POST
@@ -17,7 +17,7 @@ http:
     type: json
     data: |-
       {
-        "cin": "U62010UP2023PTC191535",
+        "cin": "U29254GJ2013FTC073479",
         "category": [
           "Certificates",
           "Change in Directors",
@@ -43,3 +43,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

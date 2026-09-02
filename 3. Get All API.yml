@@ -1,14 +1,25 @@
 info:
-  name: Test
+  name: 3. Get All API
   type: http
-  seq: 10
+  seq: 7
 
 http:
-  method: POST
-  url: "{{base_url}}/api/temp/finanvo/company/U29224GJ1987PLC010044/import"
+  method: GET
+  url: https://detail.finanvo.in/api/detailed-report/company/json/U62010UP2023PTC191535?key=all
   headers:
     - name: Content-Type
       value: application/json
+    - name: X-API-KEY
+      value: "{{API_KEY}}"
+    - name: X-API-SECRET-KEY
+      value: "{{API_SECRET}}"
+  params:
+    - name: key
+      value: all
+      type: query
+  body:
+    type: json
+    data: ""
 
 runtime:
   variables:

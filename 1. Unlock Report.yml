@@ -1,11 +1,11 @@
 info:
-  name: Get All API
+  name: 1. Unlock Report
   type: http
-  seq: 4
+  seq: 5
 
 http:
-  method: GET
-  url: https://detail.finanvo.in/api/detailed-report/company/json/U74210MH1999PLC123010?key=all
+  method: POST
+  url: https://api.finanvo.in/subscription/paybyapi/CIN/detailReport
   headers:
     - name: Content-Type
       value: application/json
@@ -13,13 +13,12 @@ http:
       value: "{{API_KEY}}"
     - name: X-API-SECRET-KEY
       value: "{{API_SECRET}}"
-  params:
-    - name: key
-      value: all
-      type: query
   body:
     type: json
-    data: ""
+    data: |-
+      {
+        "CIN": "U29254GJ2013FTC073479"
+      }
 
 runtime:
   variables:
@@ -33,3 +32,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

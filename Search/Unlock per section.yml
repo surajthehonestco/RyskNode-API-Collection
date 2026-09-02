@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/companies/1243373/data?flag=charges"
+  url: "{{base_url}}/api/companies/1192928/data?flag=all"
   headers:
     - name: Accept
       value: application/json
   params:
     - name: flag
-      value: charges
+      value: all
       type: query
   body:
     type: json
@@ -25,3 +25,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

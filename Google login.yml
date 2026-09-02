@@ -1,7 +1,7 @@
 info:
   name: Google login
   type: http
-  seq: 10
+  seq: 12
 
 http:
   method: POST
@@ -21,3 +21,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

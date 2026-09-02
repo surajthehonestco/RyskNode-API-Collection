@@ -1,20 +1,25 @@
 info:
-  name: director api
+  name: delete after test - search free company
   type: http
-  seq: 8
+  seq: 9
 
 http:
   method: GET
-  url: https://detail.finanvo.in/api/detailed-report/company/json/U28990DL2013PTC249521?key=all
+  url: https://detail.finanvo.in/search/company?query=U29224GJ1987PLC010044
   headers:
+    - name: Content-Type
+      value: application/json
     - name: X-API-KEY
       value: "{{API_KEY}}"
     - name: X-API-SECRET-KEY
       value: "{{API_SECRET}}"
   params:
-    - name: key
-      value: all
+    - name: query
+      value: U29224GJ1987PLC010044
       type: query
+  body:
+    type: json
+    data: ""
 
 runtime:
   variables:

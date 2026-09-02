@@ -1,0 +1,41 @@
+info:
+  name: pralyon Report
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: https://pralyon.rysknode.ai/api/v1/assess
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: X-API-KEY
+      value: "{{API_KEY}}"
+      disabled: true
+    - name: X-API-SECRET-KEY
+      value: "{{API_SECRET}}"
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "entity_id": "U63010MH1959PTC011380",
+        "seller_id": "string",
+        "trade_name": "string",
+        "state_code": "string",
+        "include_xai": true
+      }
+
+runtime:
+  variables:
+    - name: API_KEY
+      value: B4JqimOE0d
+    - name: API_SECRET
+      value: XB9PcaxZEdMHvySLJuZMLds9rK0C6M9nyYUqYdOK
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
