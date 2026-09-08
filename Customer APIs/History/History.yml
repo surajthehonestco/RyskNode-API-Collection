@@ -1,0 +1,46 @@
+info:
+  name: History
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{base_url}}/api/customer/history"
+  params:
+    - name: search
+      value: tata
+      type: query
+      disabled: true
+    - name: type
+      value: data_intelligence
+      type: query
+      disabled: true
+    - name: generated_by
+      value: "27"
+      type: query
+      disabled: true
+    - name: from
+      value: 2026-01-01
+      type: query
+      disabled: true
+    - name: to
+      value: 2026-12-31
+      type: query
+      disabled: true
+    - name: per_page
+      value: "15"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
