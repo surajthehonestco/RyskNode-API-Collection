@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://detail.finanvo.in/search/company?query=U29224GJ1987PLC010044
+  url: https://api.finanvo.in/search/company
   headers:
     - name: Content-Type
       value: application/json
@@ -13,10 +13,6 @@ http:
       value: "{{API_KEY}}"
     - name: X-API-SECRET-KEY
       value: "{{API_SECRET}}"
-  params:
-    - name: query
-      value: U29224GJ1987PLC010044
-      type: query
   body:
     type: json
     data: ""
