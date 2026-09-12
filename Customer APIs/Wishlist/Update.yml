@@ -12,7 +12,9 @@ http:
       {
         "name": "Gujarat Vendors Updated",
         "description": "Updated notes",
-        "status": "evaluating"
+        "status": "evaluating",
+        "is_pinned": true,
+        "pinned_at": null
       }
   auth:
     type: bearer
@@ -23,3 +25,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

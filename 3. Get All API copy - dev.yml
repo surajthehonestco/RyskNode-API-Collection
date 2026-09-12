@@ -1,30 +1,25 @@
 info:
-  name: pralyon Report
+  name: 3. Get All API copy - dev
   type: http
-  seq: 10
+  seq: 15
 
 http:
-  method: POST
-  url: https://pralyon.rysknode.ai/api/v1/assess
+  method: GET
+  url: https://dev.detail.finanvo.in/api/detailed-report/company/json/U29224GJ1987PLC010044?key=all
   headers:
     - name: Content-Type
       value: application/json
     - name: X-API-KEY
       value: "{{API_KEY}}"
-      disabled: true
     - name: X-API-SECRET-KEY
       value: "{{API_SECRET}}"
-      disabled: true
+  params:
+    - name: key
+      value: all
+      type: query
   body:
     type: json
-    data: |-
-      {
-        "entity_id": "U63010MH1959PTC011380",
-        "seller_id": "string",
-        "trade_name": "string",
-        "state_code": "string",
-        "include_xai": true
-      }
+    data: ""
 
 runtime:
   variables:

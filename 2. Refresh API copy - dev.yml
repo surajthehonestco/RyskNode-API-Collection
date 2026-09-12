@@ -1,29 +1,34 @@
 info:
-  name: pralyon Report
+  name: 2. Refresh API copy - dev
   type: http
-  seq: 10
+  seq: 14
 
 http:
   method: POST
-  url: https://pralyon.rysknode.ai/api/v1/assess
+  url: https://dev.detail.finanvo.in/api/process-financials
   headers:
     - name: Content-Type
       value: application/json
     - name: X-API-KEY
       value: "{{API_KEY}}"
-      disabled: true
     - name: X-API-SECRET-KEY
       value: "{{API_SECRET}}"
-      disabled: true
   body:
     type: json
     data: |-
       {
-        "entity_id": "U63010MH1959PTC011380",
-        "seller_id": "string",
-        "trade_name": "string",
-        "state_code": "string",
-        "include_xai": true
+        "cin": "U29224GJ1987PLC010044",
+        "category": [
+          "Certificates",
+          "Change in Directors",
+          "Incorporation Documents",
+          "Charge Documents",
+          "Annual Returns and Balance Sheet eForms",
+          "LLP Forms(Conversion of company to LLP)",
+          "Other eForm Documents",
+          "Other Attachments"
+        ],
+        "file_name": []
       }
 
 runtime:

@@ -1,30 +1,25 @@
 info:
-  name: pralyon Report
+  name: testing dev refresh
   type: http
-  seq: 10
+  seq: 12
 
 http:
   method: POST
-  url: https://pralyon.rysknode.ai/api/v1/assess
+  url: https://dev.detail.finanvo.in/api/process-financials
   headers:
     - name: Content-Type
       value: application/json
     - name: X-API-KEY
-      value: "{{API_KEY}}"
-      disabled: true
+      value: B4JqimOE0d
     - name: X-API-SECRET-KEY
-      value: "{{API_SECRET}}"
-      disabled: true
+      value: XB9PcaxZEdMHvySLJuZMLds9rK0C6M9nyYUqYdOK
   body:
     type: json
-    data: |-
-      {
-        "entity_id": "U63010MH1959PTC011380",
-        "seller_id": "string",
-        "trade_name": "string",
-        "state_code": "string",
-        "include_xai": true
-      }
+    data: "{\r
+
+      \  \"CIN\": \"U29224GJ1987PLC010044\"\r
+
+      }"
 
 runtime:
   variables:

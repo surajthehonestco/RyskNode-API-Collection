@@ -5,17 +5,20 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/customer/watchlists?search=gujarat&status=active&per_page=10"
+  url: "{{base_url}}/api/customer/watchlists"
   params:
     - name: search
       value: gujarat
       type: query
+      disabled: true
     - name: status
       value: active
       type: query
+      disabled: true
     - name: per_page
       value: "10"
       type: query
+      disabled: true
   body:
     type: json
     data: ""
@@ -28,3 +31,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -1,20 +1,16 @@
 info:
-  name: Create
+  name: Pin Wishlist
   type: http
-  seq: 1
+  seq: 9
 
 http:
-  method: POST
-  url: "{{base_url}}/api/customer/watchlists"
+  method: PATCH
+  url: "{{base_url}}/api/customer/watchlists/1/pin"
   body:
     type: json
     data: |-
       {
-        "name": "Gujarat Vendors 2",
-        "description": "Vendor monitoring list",
-        "status": "active",
-        "is_pinned": false,
-        "pinned_at": null
+        "is_pinned": true //false
       }
   auth:
     type: bearer
