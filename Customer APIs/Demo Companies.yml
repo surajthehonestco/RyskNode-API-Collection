@@ -1,0 +1,29 @@
+info:
+  name: Demo Companies
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/customer/demo-companies"
+  params:
+    - name: period
+      value: this_month
+      type: query
+      description: period=this_month|last_month|last_30_days|this_year
+      disabled: true
+    - name: credit_scope
+      value: organization
+      type: query
+      description: organization|mine
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{customer_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

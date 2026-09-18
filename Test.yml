@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{base_url}}/api/temp/finanvo/company/U29224GJ1987PLC010044/import"
+  url: "{{base_url}}/api/temp/finanvo/company/U74999DL2020PTC367876/import"
   headers:
     - name: Content-Type
       value: application/json
